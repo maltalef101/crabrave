@@ -26,7 +26,6 @@
 			mold
 			mpd
 			mpc-cli
-			mpc-cli
           ];
         };
       }

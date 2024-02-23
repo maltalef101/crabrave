@@ -1,0 +1,23 @@
+[package]
+name = "crabrave"
+version = "0.1.0"
+authors = ["Manuel Altalef <maltalef@auror.ar>"]
+license = "MIT"
+edition = "2021"
+
+[dependencies]
+crossterm = "0.26.1"
+tui = { package = "ratatui", version = "0.21.0", features = ["all-widgets", "serde"] }
+mpd = { version = "0.1.0", features = ["serde"] }
+serde = { version = "1.0.188", features = ["derive"] }
+tracing = "0.1.37"
+tracing-subscriber = { version = "0.3.17", features = ["serde", "json"] }
+figment = { version = "0.10.10", features = ["env", "toml"] }
+color-eyre = "0.6.2"
+clap = { version = "4.4.3", features = ["derive"] }
+
+[profile.release]
+strip = "symbols"
+lto = "fat"
+panic = "abort"
+codegen-units = 1

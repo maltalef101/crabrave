@@ -1,0 +1,2 @@
+[alias]
+runx = "r -- -c /home/maltalef/dev/crabrave/config.toml.default"
